@@ -1,0 +1,147 @@
+<!doctype html><HTML lang="en">
+    <HEAD>
+       
+       <META charset="utf-8" />      
+      <!--Heading/Title Bar-->
+     <link rel="stylesheet" type="text/css" href="CSS/HomePage.css"></HEAD>
+     <body>
+   
+ 
+       <div class="header">
+         <a href="#default" class="logo">Robert Irwin Photography</a>
+         <div class="header-right">
+           <a href="Index.HTML">Home</a>
+            <a href="Gallery Page.html">Gallery</a>
+            <a href="About.html">About</a>
+           <a href="Book.html">Book</a>
+           <a href="StoreRetailRange.html">Shop</a>
+            <a href="Index.HTML">Contact</a>
+         
+        
+       <div id="id_name"> </div> 
+         </div>
+       </div>
+ 
+       <div class="container">
+         <div class="mySlides">
+           <div class="numbertext">1 / 6</div>
+           <img src="ProjectImages/about-bumble-bee-blue.jpg" style="width:100%" >
+         </div>
+       
+         <div class="mySlides">
+           <div class="numbertext">2 / 6</div>
+           <img src="ProjectImages/tokyo.jpg" style="width:100%">
+         </div>
+       
+         <div class="mySlides">
+           <div class="numbertext">3 / 6</div>
+           <img src="ProjectImages/fire.jpg" style="width:100%">
+         </div>
+           
+         <div class="mySlides">
+           <div class="numbertext">4 / 6</div>
+           <img src="ProjectImages/runners.jpg" style="width:100%" >
+         </div>
+       
+         <div class="mySlides">
+           <div class="numbertext">5 / 6</div>
+           <img src="ProjectImages/Graduation-Photographer-Cork-UCC.jpg" style="width:100%" >
+         </div>
+           
+         <div class="mySlides">
+           <div class="numbertext">6 / 6</div>
+           <img src="ProjectImages/forest2.jpg" style="width:100%" >
+         </div>
+           
+         <a class="prev" onclick="plusSlides(-1)">❮</a>
+         <a class="next" onclick="plusSlides(1)">❯</a>
+       
+         <div class="caption-container">
+           <p id="caption"></p>
+         </div>
+       
+         <div class="row">
+        
+           <div class="column">
+             <img class="demo cursor" src="ProjectImages/about-bumble-bee-blue.jpg" style="width:100%" onclick="currentSlide(1)" alt="Dieing Out">
+           </div>
+           <div class="column">
+             <img class="demo cursor" src="ProjectImages/tokyo.jpg" style="width:100%" onclick="currentSlide(2)" alt="Chiba Prefecture at Night">
+           </div>
+           <div class="column">
+             <img class="demo cursor" src="ProjectImages/fire.jpg" style="width:100%" onclick="currentSlide(3)" alt="Fuego">
+           </div>
+           <div class="column">
+             <img class="demo cursor" src="ProjectImages/runners.jpg" style="width:100%" onclick="currentSlide(4)" alt="Rio Olympics 2016 Final Race ">
+           </div>
+           <div class="column">
+             <img class="demo cursor" src="ProjectImages/Graduation-Photographer-Cork-UCC.jpg"  onclick="currentSlide(5)" style="width:100%" alt="UCC Graduation 2019">
+           </div>    
+           <div class="column">
+             <img class="demo cursor" src="ProjectImages/forest2.jpg" style="width:100%" onclick="currentSlide(6)" alt="Australia BushFires 2020">
+           </div>
+           </div>
+         </div>
+      
+      
+ 
+        <div class="container1">
+         <img src="ProjectImages/snaketreehomepage.jpg" style width="1582" height="500"> <div class="centered"> <p><b><a class="one" href="StoreRetailRange.html" target="_blank">Shop Photographs</a></b></p></div>
+       </div>
+ 
+       <div class="footer">
+         <p class="contact">Contact</p>
+         <p class="email">Email     ¦    robertirwinphotographyenqiures@gmail.com</p> 
+         <p class="Socail Media"> <p><b><a class="two" href="https://www.instagram.com/robertirwinphotography/?hl=en" target="_blank">Robert Irwin Instagram</a></b></p> 
+ 
+        <p><b><a class="two" href="https://twitter.com/RobertIrwin?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">Robert Irwin Twitter</a> </b></p>
+          <p class="address">Australia Zoo
+           1638 Steve Irwin Way
+           Beerwah QLD 4519
+           Australia</p>
+       
+         </div>
+         <div>
+           <div class="bottom-footer">
+             <p class="p2">  ©2024RobertIrwin     robertirwinphotographyenqiures@gmail.com        <a class="two" href="StoreRetailRange.html" target="_blank">Store</a> </p>
+   
+           <p id="bottom-footer">
+             </p>
+       </div>
+         </div>
+        
+       
+      
+ 
+       <script>
+         let slideIndex = 1;
+         showSlides(slideIndex);
+         
+         function plusSlides(n) {
+           showSlides(slideIndex += n);
+         }
+         
+         function currentSlide(n) {
+           showSlides(slideIndex = n);
+         }
+         
+         function showSlides(n) {
+           let i;
+           let slides = document.getElementsByClassName("mySlides");
+           let dots = document.getElementsByClassName("demo");
+           let captionText = document.getElementById("caption");
+           if (n > slides.length) {slideIndex = 1}
+           if (n < 1) {slideIndex = slides.length}
+           for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";
+           }
+           for (i = 0; i < dots.length; i++) {
+             dots[i].className = dots[i].className.replace(" active", "");
+           }
+           slides[slideIndex-1].style.display = "block";
+           dots[slideIndex-1].className += " active";
+           captionText.innerHTML = dots[slideIndex-1].alt;
+         }
+       </script>
+     </body>
+ </HTML>
